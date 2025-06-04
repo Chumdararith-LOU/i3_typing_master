@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <style>
-        /* General body styling */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #f4f7fa;
@@ -14,13 +14,12 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh; /* Ensure it takes full viewport height */
+            min-height: 100vh;
             margin: 0;
             padding: 20px;
-            box-sizing: border-box; /* Include padding in element's total width and height */
+            box-sizing: border-box;
         }
 
-        /* Container for the login form */
         .login-container {
             background-color: #ffffff;
             border: 1px solid #ddd;
@@ -28,33 +27,29 @@
             padding: 30px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             width: 100%;
-            max-width: 400px; /* Max width for better appearance on larger screens */
+            max-width: 400px;
             text-align: center;
         }
 
-        /* Heading styling */
         h1 {
             font-size: 2rem;
             color: #2c3e50;
             margin-bottom: 25px;
         }
 
-        /* Form styling */
         form {
             display: flex;
             flex-direction: column;
-            gap: 15px; /* Space between form elements */
+            gap: 15px;
         }
 
-        /* Label styling */
         label {
             font-size: 1rem;
             color: #555;
-            text-align: left; /* Align labels to the left */
+            text-align: left;
             margin-bottom: 5px;
         }
 
-        /* Input field styling */
         input[type="email"],
         input[type="password"] {
             width: 100%;
@@ -62,10 +57,9 @@
             border: 1px solid #ccc;
             border-radius: 5px;
             font-size: 1rem;
-            box-sizing: border-box; /* Include padding in element's total width and height */
+            box-sizing: border-box;
         }
 
-        /* Submit button styling */
         button[type="submit"] {
             background-color: #1abc9c;
             color: white;
@@ -81,10 +75,9 @@
 
         button[type="submit"]:hover {
             background-color: #16a085;
-            transform: translateY(-2px); /* Slight lift effect on hover */
+            transform: translateY(-2px);
         }
 
-        /* Link styling for forgot password and registration */
         .links {
             margin-top: 20px;
             font-size: 0.95rem;
@@ -102,7 +95,6 @@
             text-decoration: underline;
         }
 
-        /* Message box styling (for JavaScript messages) */
         .message-box {
             background-color: #f8d7da;
             color: #721c24;
@@ -110,11 +102,25 @@
             border-radius: 5px;
             padding: 10px;
             margin-top: 15px;
-            display: none; /* Hidden by default */
+            display: none;
             font-size: 0.9rem;
+        }
+        .login {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #16a085;
+            color: white;
+            height: 3em;
+            border-radius: 8px;
+        }
+        .login:hover {
+            background-color: #1abc9c;
+            text-decoration: none;
         }
     </style>
 </head>
+
 <body>
     <div class="login-container">
         <h1>Login</h1>
@@ -125,8 +131,7 @@
 
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" required>
-
-            <button type="submit">Login</button>
+            <a class="login" href="index.html">Login</a>
         </form>
         <div class="links">
             <a href="reset_password.html">Forgot Password?</a>
@@ -134,52 +139,6 @@
             <a href="User_Registration.html">Register</a>
         </div>
     </div>
-
-    <script>
-        // Get elements from the DOM
-        const loginForm = document.getElementById('loginForm');
-        const messageBox = document.getElementById('messageBox');
-
-        // Function to display messages in the message box
-        function showMessage(message, type = 'error') {
-            messageBox.textContent = message;
-            messageBox.style.display = 'block';
-            if (type === 'success') {
-                messageBox.style.backgroundColor = '#d4edda';
-                messageBox.style.color = '#155724';
-                messageBox.style.borderColor = '#c3e6cb';
-            } else {
-                messageBox.style.backgroundColor = '#f8d7da';
-                messageBox.style.color = '#721c24';
-                messageBox.style.borderColor = '#f5c6cb';
-            }
-        }
-
-        // Event listener for form submission
-        loginForm.addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent default form submission
-
-            // Get form values
-            const email = document.getElementById('email').value;
-            const password = document.getElementById('password').value;
-
-            // Basic validation
-            if (!email || !password) {
-                showMessage('Please enter both email and password.');
-                return;
-            }
-
-            // Simulate login process (replace with actual authentication logic)
-            if (email === 'user@example.com' && password === 'password123') {
-                showMessage('Login successful! Redirecting...', 'success');
-                // In a real application, you would redirect to a dashboard or home page
-                setTimeout(() => {
-                    window.location.href = 'index.html'; // Redirect to home page
-                }, 1500);
-            } else {
-                showMessage('Invalid email or password. Please try again.');
-            }
-        });
-    </script>
 </body>
+
 </html>
