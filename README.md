@@ -78,12 +78,6 @@ You can navigate between these pages using the links provided in each HTML file.
 
 ---
 
-## License
-
-This project is licensed under the **MIT License**.
-
----
-
 ## Contact
 
 For support, feedback, or inquiries, please contact us at [louchumdararith02@gmail.com].
