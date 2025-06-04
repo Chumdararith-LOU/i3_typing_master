@@ -1,86 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <title>Typing Results - Typing Test</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+       background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                  url('https://images.unsplash.com/photo-1557682250-33bd709cbe85?ixlib=rb-4.0.3&auto=format&fit=crop&w=1400&q=80') no-repeat center center/cover;
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      
+    }
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 10px;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        h1 {
-            text-align: center;
-        }
-        table {
-            width: 50%;
-            border-collapse: collapse;
-        }
-        th, td {
-            border: 1px solid black;
-            padding: 10px;
-            text-align: left;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
-        button{
-            margin-top: 10px;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-        a {
-            text-decoration: none;
-            color: black;
-        }
-    </style>
+    nav {
+      background-color: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(8px);
+      padding: 1em 2em;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
+    nav .logo {
+      font-size: 1.8em;
+      font-weight: 800;
+      color: #ffffff;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 1.5em;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #00d9ff;
+    }
+
+    .container {
+
+      max-width: 800px;
+      margin: auto;
+      margin-top: 15em;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 2em;
+      border-radius: 10px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+      
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 1em;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1em;
+    }
+
+    th, td {
+      padding: 0.8em;
+      border-bottom: 1px solid rgba(255,255,255,0.3);
+      text-align: center;
+    }
+
+    th {
+      background-color: rgba(255,255,255,0.15);
+    }
+
+    
+
+    footer {
+      background-color: rgba(255, 255, 255, 0.05);
+      color: #ccc;
+      text-align: center;
+      padding: 1em;
+      margin-top: auto;
+      font-size: 0.95em;
+    }
+  </style>
 </head>
-
-
-
 <body>
-    <h1>Test Results</h1>
-    <table>
-        <tr>
-            <th>ID</th>
-            <th>User</th>
-            <th>Difficulty</th>
-            <th>Word per sec</th>
-            <th>Result</th>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>Ngim</td>
-            <td>Easy</td>
-            <td>40</td>
-            <td>Pass</td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>Dararith</td>
-            <td>Medium</td>
-            <td>50</td>
-            <td>Pass</td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>Chinghoir</td>
-            <td>Hard</td>
-            <td>30</td>
-            <td>Fail</td>
-        </tr>
-    </table>
 
-    <button><a href="index.html">Back to Home</a></button>
+  <nav>
+    <div class="logo">TypingTest</div>
+    <div>
+      <a href="landing.html">Home</a>
+      <a href="typing.html">Test</a>
+      <a href="results.html">Results</a>
+      <a href="about.html">About</a>
+      <a href="login.html">Login</a>
+      <a href="register.html">Register</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h2>Your Typing Test Results</h2>
+    <table>
+      <tr>
+        <th>#</th>
+        <th>Date</th>
+        <th>WPM</th>
+        <th>Accuracy</th>
+        <th>Time (sec)</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>2025-06-01</td>
+        <td>72</td>
+        <td>98%</td>
+        <td>60</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>2025-06-03</td>
+        <td>65</td>
+        <td>94%</td>
+        <td>60</td>
+      </tr>
+      <!-- Add more rows as needed -->
+    </table>
+  </div>
+
+  <footer>
+    &copy; 2025 TypingTest. All rights reserved.
+  </footer>
 
 </body>
 </html>
