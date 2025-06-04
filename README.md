@@ -1,6 +1,3 @@
-Sure! Here's the **same README.md content**, but **without emojis**, as requested:
-
----
 
 # Typing Test Web Application
 
@@ -50,34 +47,34 @@ This is a web-based application designed to help users improve their typing spee
 
 ## Installation
 
-This project is a static web application and does not require any backend installation. To run it locally:
+You can either clone the project or download it as a ZIP file.
 
-1. Clone or download the project files:
-   ```bash
-   git clone https://github.com/Chumdararith-LOU/i3_typing_master.git
-   ```
-2. Open the `index.html` file in a web browser to start using the application.
+#### Option A: Clone the Repository
 
+Open your terminal or command prompt and run the following command:
+
+```bash
+git clone https://github.com/Chumdararith-LOU/i3_typing_master.git
+```
+
+#### Option B: Download Manually
+
+- Go to the GitHub repository: [https://github.com/Chumdararith-LOU/i3_typing_master](https://github.com/Chumdararith-LOU/i3_typing_master)
+- Click on the green **Code** button and select **Download ZIP**
+- Extract the files to your desired location
 ---
 
-## Contributing
+## Available Pages
+The following pages are included:
 
-Contributions are welcome! To contribute:
+- `index.html` – Home page
+- `User_Registration.html` – User registration form
+- `login.html` – Login page
+- `typing_test.html` – Typing test interface
+- `TestResult.html` – Page to view previous typing results
+- `reset_password.html` – Password reset form
 
-1. Fork the repository.
-2. Create a new branch for your feature or bugfix:
-   ```bash
-   git checkout -b feature/new-feature
-   ```
-3. Make your changes and commit them:
-   ```bash
-   git commit -m "Add new feature"
-   ```
-4. Push to the branch:
-   ```bash
-   git push origin feature/new-feature
-   ```
-5. Submit a pull request with a clear description of your changes.
+You can navigate between these pages using the links provided in each HTML file.
 
 ---
 
@@ -89,8 +86,7 @@ This project is licensed under the **MIT License**.
 
 ## Contact
 
-For support, feedback, or inquiries, please contact us at [your-email@example.com].
+For support, feedback, or inquiries, please contact us at [louchumdararith02@gmail.com].
 
 ---
 
-Let me know if you'd like this saved as a downloadable `.md` file or need any modifications!
