@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        /* General body styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7fa;
+            color: #333;
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* Ensure it takes full viewport height */
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box; /* Include padding in element's total width and height */
+        }
+
+        /* Container for the login form */
+        .login-container {
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px; /* Max width for better appearance on larger screens */
+            text-align: center;
+        }
+
+        /* Heading styling */
+        h1 {
+            font-size: 2rem;
+            color: #2c3e50;
+            margin-bottom: 25px;
+        }
+
+        /* Form styling */
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px; /* Space between form elements */
+        }
+
+        /* Label styling */
+        label {
+            font-size: 1rem;
+            color: #555;
+            text-align: left; /* Align labels to the left */
+            margin-bottom: 5px;
+        }
+
+        /* Input field styling */
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+            box-sizing: border-box; /* Include padding in element's total width and height */
+        }
+
+        /* Submit button styling */
+        button[type="submit"] {
+            background-color: #1abc9c;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            margin-top: 10px;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #16a085;
+            transform: translateY(-2px); /* Slight lift effect on hover */
+        }
+
+        /* Link styling for forgot password and registration */
+        .links {
+            margin-top: 20px;
+            font-size: 0.95rem;
+        }
+
+        .links a {
+            color: #2c3e50;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        .links a:hover {
+            color: #1abc9c;
+            text-decoration: underline;
+        }
+
+        /* Message box styling (for JavaScript messages) */
+        .message-box {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+            border-radius: 5px;
+            padding: 10px;
+            margin-top: 15px;
+            display: none; /* Hidden by default */
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h1>Login</h1>
+        <div id="messageBox" class="message-box"></div>
+        <form id="loginForm">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Login</button>
+        </form>
+        <div class="links">
+            <a href="reset_password.html">Forgot Password?</a>
+            <span>|</span>
+            <a href="User_Registration.html">Register</a>
+        </div>
+    </div>
+
+    <script>
+        // Get elements from the DOM
+        const loginForm = document.getElementById('loginForm');
+        const messageBox = document.getElementById('messageBox');
+
+        // Function to display messages in the message box
+        function showMessage(message, type = 'error') {
+            messageBox.textContent = message;
+            messageBox.style.display = 'block';
+            if (type === 'success') {
+                messageBox.style.backgroundColor = '#d4edda';
+                messageBox.style.color = '#155724';
+                messageBox.style.borderColor = '#c3e6cb';
+            } else {
+                messageBox.style.backgroundColor = '#f8d7da';
+                messageBox.style.color = '#721c24';
+                messageBox.style.borderColor = '#f5c6cb';
+            }
+        }
+
+        // Event listener for form submission
+        loginForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Get form values
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            // Basic validation
+            if (!email || !password) {
+                showMessage('Please enter both email and password.');
+                return;
+            }
+
+            // Simulate login process (replace with actual authentication logic)
+            if (email === 'user@example.com' && password === 'password123') {
+                showMessage('Login successful! Redirecting...', 'success');
+                // In a real application, you would redirect to a dashboard or home page
+                setTimeout(() => {
+                    window.location.href = 'index.html'; // Redirect to home page
+                }, 1500);
+            } else {
+                showMessage('Invalid email or password. Please try again.');
+            }
+        });
+    </script>
+</body>
+</html>
